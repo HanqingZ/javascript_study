@@ -1,12 +1,8 @@
-//不要用解构来实现类似功能，考察 apply/call
+'use strict'
 
 function b() {
   console.log(arguments)
 }
-
-// a = (...args) => { 
-//   b(...args.slice(args.length - 3))
-// }
 
 a = (...args) => {
   b.apply(this, args.slice(args.length - 3))
